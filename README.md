@@ -20,3 +20,6 @@ URL "amqp://guest:guest@localhost:5672" digunakan dalam kedua program subscriber
    ![alt text](/image/sendingandprocessevent1.jpg)
    ![alt text](/image/sendingandprocessevent2.jpg)
    Setelah menjalankan perintah cargo run pada program subscriber dan publisher, data yang dihasilkan oleh publisher akan dikirim ke dalam message queue. Selanjutnya, subscriber akan menerima data dari message queue tersebut dan menampilkannya pada console atau terminal sebagai bukti bahwa proses komunikasi antara publisher dan subscriber melalui message broker telah berhasil. 
+5. Monitoring chart based on publisher 
+   ![alt text](/image/Monitoringchartbasedonpublisher.jpg)
+   Berdasarkan screenshot tersebut, terlihat adanya spike pada message rates yang terjadi karena eksekusi berulang perintah cargo run pada publisher. Setiap kali perintah ini dijalankan, pesan dikirim ke message queue, yang mengakibatkan peningkatan message rates di RabbitMQ. Grafik menunjukkan bahwa message rates meningkat secara tajam pada titik-titik di mana perintah cargo run dijalankan berulang kali. 
