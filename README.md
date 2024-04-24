@@ -16,3 +16,7 @@ Data ini penting untuk diproses dan disampaikan oleh sistem pengirim pesan ke si
 URL "amqp://guest:guest@localhost:5672" digunakan dalam kedua program subscriber dan publisher untuk terhubung ke server AMQP yang sama. Ini menunjukkan bahwa keduanya saling terkoneksi dengan menggunakan informasi akun yang identik, dengan nama pengguna "guest" dan sandi "guest", pada server AMQP yang aktif di localhost menggunakan port 5672. URL tersebut berperan sebagai alamat dari message broker yang digunakan oleh kedua program. Subscriber dan publisher diatur dengan URL yang sama agar dapat berkomunikasi melalui message broker yang sama, dalam hal ini RabbitMQ. Ketika publisher mengirim pesan ke antrian (queue) di RabbitMQ, subscriber akan memasang listener untuk menerima dan memproses pesan dari antrian tersebut. Koneksi yang konsisten ke message broker yang sama memastikan bahwa komunikasi antara subscriber dan publisher berjalan dengan lancar dan efisien.
 3. Running RabbitMQ as message broker.
    ![alt text](/image/RunningRabbitMQasmessagebroker.jpg)
+4. Sending and Process Event
+   ![alt text](/image/sendingandprocessevent1.jpg)
+   ![alt text](/image/sendingandprocessevent2.jpg)
+   Setelah menjalankan perintah cargo run pada program subscriber dan publisher, data yang dihasilkan oleh publisher akan dikirim ke dalam message queue. Selanjutnya, subscriber akan menerima data dari message queue tersebut dan menampilkannya pada console atau terminal sebagai bukti bahwa proses komunikasi antara publisher dan subscriber melalui message broker telah berhasil. 
